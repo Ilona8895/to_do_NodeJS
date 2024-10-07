@@ -43,6 +43,6 @@ app.patch("/todo/:todoId", (req, res) => {
 
 const port = process.env.PORT || 8888;
 
-app.listen(8888, () => {
+app.listen(port, () => {
   console.log(`Start aplikacji na porcie ${port}`);
 });
