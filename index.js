@@ -33,9 +33,12 @@ app.patch("/todo/:todoId", (req, res) => {
 
   if (toDoItem) {
     const update = req.body;
+
     if (update.completed !== undefined) toDoItem.completed = update.completed;
 
     if (update.value !== undefined) toDoItem.value = update.value;
+
+    if (update.timer !== undefined) toDoItem.timer = update.timer;
 
     res.status(200).end();
   } else res.status(404).end();
